@@ -7,7 +7,7 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-# Plant Leaf Detection System"""
+# Lion or Cheetah Classification"""
 )
 file=st.file_uploader("Choose plant photo from computer",type=["jpg","png"])
 
@@ -28,5 +28,5 @@ else:
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
     class_names=['Lion','Cheetah']
-    string="OUTPUT : "+class_names[np.argmax(prediction)]
+    string="The picture shown above is a : "+class_names[np.argmax(prediction)]
     st.success(string)
