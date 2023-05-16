@@ -5,7 +5,7 @@ import tensorflow as tf
 def load_model():
   model=tf.keras.models.load_weights('model1.h5')
   return model
-model=load_model()
+model=load_weights()
 st.write("""
 # Plant Leaf Detection System"""
 )
