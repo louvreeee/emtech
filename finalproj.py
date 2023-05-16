@@ -9,7 +9,7 @@ model=load_model()
 st.write("""
 # Lion or Cheetah Classification"""
 )
-file=st.file_uploader("Choose plant photo from computer",type=["jpg","png"])
+file=st.file_uploader("Choose photo from computer, must be a lion or cheetah",type=["jpg","png"])
 
 import cv2
 from PIL import Image,ImageOps
