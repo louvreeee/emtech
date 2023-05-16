@@ -2,10 +2,10 @@ import streamlit as st
 import tensorflow as tf
 
 @st.cache(allow_output_mutation=True)
-def load_weights():
-  model=tf.keras.models.load_weights('model1.h5')
+def load_model():
+  model=tf.keras.models.load_model('sanple.hdf5')
   return model
-model=load_weights()
+model=load_model()
 st.write("""
 # Plant Leaf Detection System"""
 )
