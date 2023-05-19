@@ -20,7 +20,7 @@ st.markdown(
 # The side bar that contains radio buttons for selection of charts
 with st.sidebar:
     st.header('Select the image that you would like to display')
-    chart = st.radio('Lion', 'Cheetah')
+    chart = st.radio(("Check the difference", 'Lion', 'Cheetah'))
     
     if chart == 'Lion': 
       image1 = Image.open('Lion.jpg')
