@@ -28,6 +28,7 @@ with st.sidebar:
     if chart == 'Cheetah': 
       image1 = Image.open('Cheetah.jpg')
       st.image(image1)
+    st.header('Select the image that you would like to display')
     if chart == 'About the student': 
       st.info("""Maria Lourdes Camenforte Gesite, 3rd Year BSCpE Student""") 
       image1 = Image.open('MariaLourdesGesite.JPG')
