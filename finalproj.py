@@ -35,7 +35,9 @@ st.info("An image classifying project that differentiates between two very simil
 
 image = Image.open('LionCheetah.png')
 st.image(image, caption='Lion vs Cheetah')
-    
+
+st.info("""Select a year with the slider to see the intensity
+                of emissions change in each country""")    
 # This container will be displayed below the text above
         
 #st.write("""
