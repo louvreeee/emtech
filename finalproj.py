@@ -8,6 +8,17 @@ def load_model():
   return model
 model=load_model()
 
+    st.markdown(
+        """
+       <style>
+       [data-testid="stSidebar"][aria-expanded="true"]{
+           min-width: 450px;
+           max-width: 450px;
+       }
+       """,
+        unsafe_allow_html=True,
+    )  
+  
 # The side bar that contains radio buttons for selection of charts
 with st.sidebar:
     st.header('Select the image that you would like to display')
