@@ -18,8 +18,9 @@ with st.sidebar:
     if chart == 'Lion': 
       image1 = Image.open('Lion.png')
       st.image(image1)
-     if chart == 'Cheetah': 
-        st.image(image1)
+    if chart == 'Cheetah': 
+      image1 = Image.open('Lion.png')
+      st.image(image1)
 
 
 st.title("Lion or Cheetah Classifier")
