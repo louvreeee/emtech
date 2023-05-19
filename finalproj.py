@@ -30,7 +30,7 @@ with st.sidebar:
       st.image(image1)
     if chart == 'About the student': 
       st.info("""Maria Lourdes Camenforte Gesite, 3rd Year BSCpE Student""") 
-      image1 = Image.open('MariaLourdesGesite.jpg')
+      image1 = Image.open('MariaLourdesGesite.JPG')
       st.image(image1)
     if chart == 'Conclusion':
       st.info("""In this activity, I successfully deployed a deep learning model in the cloud. Specifically, I used a Convolutional Neural Network (CNN) 
