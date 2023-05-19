@@ -25,8 +25,8 @@ st.image(image, caption='Lion vs Cheetah')
 
 
 # This container will be displayed below the text above
-  with st.container():
-    col1, col2, col3 = st.columns((20,50,20))
+    with st.container():
+      col1, col2, col3 = st.columns((20,50,20))
 
     with col2:
         st.header("Global emissions since 1850")
