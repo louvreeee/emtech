@@ -27,7 +27,7 @@ if chart == 'Comparing continents':
 
 
 # This container will be displayed below the text above
-with st.container():
+  with st.container():
     col1, col2, col3 = st.columns((20,50,20))
 
     with col2:
