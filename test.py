@@ -19,8 +19,7 @@ with st.container():
         st.info("""Select a year with the slider to see the intensity
                 of emissions change in each country""")
 #st.write("""
-# Lion or Cheetah Classification"""
-)
+# Lion or Cheetah Classification""")
 file=st.file_uploader("Choose photo from computer, must be a lion or cheetah",type=["jpg","png"])
 
 import cv2
