@@ -12,7 +12,7 @@ st.info("An example of a Streamlit layout using columns")
 
 # This container will be displayed below the text above
 with st.container():
-    col1, col2, col3 = st.columns((25,50,25))
+    col1, col2, col3 = st.columns((40,50,40))
 
     with col2:
         st.header("Global emissions since 1850")
