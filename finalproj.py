@@ -43,7 +43,7 @@ with st.sidebar:
                After realizing this was the source of the error, I switched to using the Hdf5 file format and saved the model using the command `model.save()`. 
                While any file format can be used to deploy the model, I recommend using the .save() method instead of just using the weights in saving the model.""")
     st.header('LINKS')
-    chart1 = st.radio('None', ('Google Colab Link', 'Github Repository Link'))
+    chart2 = st.radio('None', ('Google Colab Link', 'Github Repository Link'))
     if chart2 == 'Google Colab Link':
       st.info("""https://colab.research.google.com/drive/17ovVa1jHejGPrDaT_S8-0--y7vUmyHRM?usp=sharing""")
     if chart2 == 'Github Repository Link':
