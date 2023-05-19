@@ -2,9 +2,6 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 
-image = Image.open('LionCheetah.png')
-
-st.image(image, caption='Sunrise by the mountains')
 @st.cache(allow_output_mutation=True)
 def load_model():
   model=tf.keras.models.load_model('finals11.hdf5')
@@ -14,6 +11,8 @@ model=load_model()
 st.title("Lion or Cheetah Classifier")
 st.info("An image classifying project that differentiates between two very similar-looking wild cats: Cheetahs and Lion using Python and TensorFlow")
 
+image = Image.open('LionCheetah.png')
+st.image(image, caption='Lion vs Cheetah')
 # This container will be displayed below the text above
 with st.container():
     col1, col2, col3 = st.columns((20,50,20))
