@@ -16,10 +16,10 @@ with st.sidebar:
     ('Lion', 'Cheetah'))
     
     if chart == 'Lion': 
-      image1 = Image.open('Lion.png')
+      image1 = Image.open('Lion.jpg')
       st.image(image1)
     if chart == 'Cheetah': 
-      image1 = Image.open('Lion.png')
+      image1 = Image.open('Lion.jpg')
       st.image(image1)
 
 
