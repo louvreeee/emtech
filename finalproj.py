@@ -20,7 +20,7 @@ st.markdown(
 # The side bar that contains radio buttons for selection of charts
 with st.sidebar:
     st.header('Select the image that you would like to display')
-    chart = st.radio("Sample Image", ('Lion', 'Cheetah','Conclusion','Google Colab Link', 'Github Repository Link', 'About the student'))
+    chart = st.radio("Sample Image", ('Lion', 'Cheetah'))
     
     if chart == 'Lion': 
       image1 = Image.open('Lion.jpg')
@@ -28,12 +28,13 @@ with st.sidebar:
     if chart == 'Cheetah': 
       image1 = Image.open('Cheetah.jpg')
       st.image(image1)
-    st.header('Select the image that you would like to display')
-    if chart == 'About the student': 
+    st.header('Select the')
+    chart1 = st.radio("Sample Image", ('Conclusion','Google Colab Link', 'Github Repository Link', 'About the student'))
+    if chart1 == 'About the student': 
       st.info("""Maria Lourdes Camenforte Gesite, 3rd Year BSCpE Student""") 
       image1 = Image.open('MariaLourdesGesite.JPG')
       st.image(image1)
-    if chart == 'Conclusion':
+    if chart1 == 'Conclusion':
       st.info("""In this activity, I successfully deployed a deep learning model in the cloud. Specifically, I used a Convolutional Neural Network (CNN) 
                 selected the Lion Vs. Cheetah dataset. To accomplish the deployment, I needed a GitHub account, which I used to sign in to a Streamlit website. 
                It can be denoted that to successfully deploy the model, necessary libraries should be installed such as the tensorflow, streamlit, numpy, etc.
@@ -41,9 +42,9 @@ with st.sidebar:
                I discovered that the error was due to how I saved the model. Initially, I used the H5 file format and attempted to save the model using .load_weights(). 
                After realizing this was the source of the error, I switched to using the Hdf5 file format and saved the model using the command `model.save()`. 
                While any file format can be used to deploy the model, I recommend using the .save() method instead of just using the weights in saving the model.""")
-    if chart == 'Google Colab Link':
+    if chart1 == 'Google Colab Link':
       st.info("""https://colab.research.google.com/drive/17ovVa1jHejGPrDaT_S8-0--y7vUmyHRM?usp=sharing""")
-    if chart == 'Github Repository Link':
+    if chart1 == 'Github Repository Link':
       st.info("""https://github.com/louvre11/emtech/tree/a16b6c7fcea5647349d089336994a45a6a8fe1cd""")    
  
     
