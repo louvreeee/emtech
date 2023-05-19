@@ -20,13 +20,17 @@ st.markdown(
 # The side bar that contains radio buttons for selection of charts
 with st.sidebar:
     st.header('Select the image that you would like to display')
-    chart = st.radio("Sample Image", ('Lion', 'Cheetah','Conclusion','Google Colab Link', 'Github Repository Link'))
+    chart = st.radio("Sample Image", ('Lion', 'Cheetah','Conclusion','Google Colab Link', 'Github Repository Link', 'About the student'))
     
     if chart == 'Lion': 
       image1 = Image.open('Lion.jpg')
       st.image(image1)
     if chart == 'Cheetah': 
       image1 = Image.open('Cheetah.jpg')
+      st.image(image1)
+    if chart == 'About the student': 
+      st.info("""Maria Lourdes Camenforte Gesite, 3rd Year BSCpE Student""") 
+      image1 = Image.open('MariaLourdesGesite.jpg')
       st.image(image1)
     if chart == 'Conclusion':
       st.info("""In this activity, I successfully deployed a deep learning model in the cloud. Specifically, I used a Convolutional Neural Network (CNN) 
