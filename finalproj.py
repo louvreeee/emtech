@@ -1,14 +1,30 @@
 import streamlit as st
 import tensorflow as tf
+from PIL import Image
 
+image = Image.open('LionCheetah.png')
+
+st.image(image, caption='Sunrise by the mountains')
 @st.cache(allow_output_mutation=True)
 def load_model():
   model=tf.keras.models.load_model('finals11.hdf5')
   return model
 model=load_model()
-st.write("""
-# Lion or Cheetah Classification"""
-)
+
+st.title("Lion or Cheetah Classifier")
+st.info("An image classifying project that differentiates between two very similar-looking wild cats: Cheetahs and Lion using Python and TensorFlow")
+
+# This container will be displayed below the text above
+with st.container():
+    col1, col2, col3 = st.columns((20,50,20))
+
+    with col2:
+        st.header("Global emissions since 1850")
+        st.info("""Select a year with the slider to see the intensity
+                of emissions change in each country""")
+        
+#st.write("""
+# Lion or Cheetah Classification""")
 file=st.file_uploader("Choose photo from computer, must be a lion or cheetah",type=["jpg","png"])
 
 import cv2
