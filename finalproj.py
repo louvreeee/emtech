@@ -28,7 +28,8 @@ with st.sidebar:
     if chart == 'Cheetah': 
       image1 = Image.open('Cheetah.jpg')
       st.image(image1)
-
+ 
+    my_component(greeting="hello")
 
 st.title("Lion or Cheetah Classifier")
 st.info("An image classifying project that differentiates between two very similar-looking wild cats: Cheetahs and Lion using Python and TensorFlow")
