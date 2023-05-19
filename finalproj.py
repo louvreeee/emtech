@@ -29,13 +29,13 @@ with st.sidebar:
       image1 = Image.open('Cheetah.jpg')
       st.image(image1)
     if chart == 'Conclusion':
-      st.title("In this task, I successfully deployed a deep learning model in the cloud. Specifically, I utilized a Convolutional Neural Network (CNN) 
-               and selected the Lion Vs. Cheetah dataset. To accomplish the deployment, I needed a GitHub account, which I used to sign in to a Streamlit website. 
+      st.title("In this task, I successfully deployed a deep learning model in the cloud. Specifically, I utilized a Convolutional Neural Network (CNN), 
+                selected the Lion Vs. Cheetah dataset. To accomplish the deployment, I needed a GitHub account, which I used to sign in to a Streamlit website. 
                It can be denoted that to successfully deploy the model, necessary libraries should be installed such as the tensorflow, streamlit, numpy, etc.
-               During the activity, I encountered an error stating "no module named TensorFlow," even though I had already installed it. Upon researching the issue, 
-               I discovered that the error was due to the file type I used. Initially, I used the H5 file format and attempted to load the model using `.load_weights()`. 
+               During the activity, I encountered an error stating no module named TensorFlow, even though I had already installed it. Upon researching the issue, 
+               I discovered that the error was due to the file type I used. Initially, I used the H5 file format and attempted to load the model using .load_weights(). 
                After realizing this was the source of the error, I switched to using the Hdf5 file format and saved the model using the command `model.save()`. 
-               While any file format can be used to deploy the model, I recommend using the `.save()` method instead of just saving the weights.")
+               While any file format can be used to deploy the model, I recommend using the .save() method instead of just saving the weights.")
  
     
 
