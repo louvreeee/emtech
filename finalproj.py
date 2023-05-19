@@ -25,13 +25,7 @@ st.image(image, caption='Lion vs Cheetah')
 
 
 # This container will be displayed below the text above
-    with st.container():
-        col1, col2, col3 = st.columns((20,50,20))
 
-    with col2:
-        st.header("Global emissions since 1850")
-        st.info("""Select a year with the slider to see the intensity
-                of emissions change in each country""")
         
 #st.write("""
 # Lion or Cheetah Classification""")
