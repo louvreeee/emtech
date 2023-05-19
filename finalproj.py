@@ -60,5 +60,5 @@ else:
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
     class_names=['Lion','Cheetah']
-    string="The picture shown above is a : "+class_names[np.argmax(prediction)]
+    string="The picture shown above is a  "+class_names[np.argmax(prediction)]
     st.success(string)
