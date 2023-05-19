@@ -8,16 +8,14 @@ def load_model():
   return model
 model=load_model()
 
-    st.markdown(
-        """
-       <style>
-       [data-testid="stSidebar"][aria-expanded="true"]{
+st.markdown(
+"""
+    <style>
+    [data-testid="stSidebar"][aria-expanded="true"]{
            min-width: 450px;
            max-width: 450px;
-       }
-       """,
-        unsafe_allow_html=True,
-    )  
+ }
+ """,unsafe_allow_html=True,)  
   
 # The side bar that contains radio buttons for selection of charts
 with st.sidebar:
