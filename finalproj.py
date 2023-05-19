@@ -14,6 +14,12 @@ with st.sidebar:
     chart = st.radio(
     "Select the image that you would like to display",
     ('Lion', 'Cheetah'))
+    image1 = Image.open('Lion.png')
+      if chart == 'World Map': 
+        st.image(image1)
+      if chart == 'Continent Emissions': 
+        st.image(image1)
+
 
 st.title("Lion or Cheetah Classifier")
 st.info("An image classifying project that differentiates between two very similar-looking wild cats: Cheetahs and Lion using Python and TensorFlow")
