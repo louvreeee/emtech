@@ -15,9 +15,9 @@ with st.sidebar:
     "Select the image that you would like to display",
     ('Lion', 'Cheetah'))
     image1 = Image.open('Lion.png')
-      if chart == 'Lion': 
+     if chart == 'Lion': 
         st.image(image1)
-      if chart == 'Cheetah': 
+     if chart == 'Cheetah': 
         st.image(image1)
 
 
