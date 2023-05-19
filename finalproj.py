@@ -36,9 +36,9 @@ with st.sidebar:
                I discovered that the error was due to how I saved the model. Initially, I used the H5 file format and attempted to save the model using .load_weights(). 
                After realizing this was the source of the error, I switched to using the Hdf5 file format and saved the model using the command `model.save()`. 
                While any file format can be used to deploy the model, I recommend using the .save() method instead of just using the weights in saving the model.""")
-     if chart == 'Google Colab Link':
+    if chart == 'Google Colab Link':
       st.info("""https://colab.research.google.com/drive/17ovVa1jHejGPrDaT_S8-0--y7vUmyHRM?usp=sharing""")
-     if chart == 'Github Repository Link':
+    if chart == 'Github Repository Link':
       st.info("""https://github.com/louvre11/emtech/tree/a16b6c7fcea5647349d089336994a45a6a8fe1cd""")    
  
     
