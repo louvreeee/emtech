@@ -13,6 +13,19 @@ st.info("An image classifying project that differentiates between two very simil
 
 image = Image.open('LionCheetah.png')
 st.image(image, caption='Lion vs Cheetah')
+
+chart = st.radio(
+    "Select the chart that you would like to display",
+    ('World Map', 'Continent Emissions', 'Comparing continents'))
+
+if chart == 'World Map': 
+    image.open('LionCheetah.png')
+if chart == 'Continent Emissions': 
+    image.open('Lion.png')
+if chart == 'Comparing continents': 
+    
+
+
 # This container will be displayed below the text above
 with st.container():
     col1, col2, col3 = st.columns((20,50,20))
