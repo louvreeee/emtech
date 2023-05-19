@@ -8,21 +8,19 @@ def load_model():
   return model
 model=load_model()
 
+# The side bar that contains radio buttons for selection of charts
+with st.sidebar:
+    st.header('Select the image that you would like to display')
+    chart = st.radio(
+    "Select the image that you would like to display",
+    ('Lion', 'Cheetah'))
+
 st.title("Lion or Cheetah Classifier")
 st.info("An image classifying project that differentiates between two very similar-looking wild cats: Cheetahs and Lion using Python and TensorFlow")
 
 image = Image.open('LionCheetah.png')
 st.image(image, caption='Lion vs Cheetah')
 
-chart = st.radio(
-    "Select the chart that you would like to display",
-    ('World Map', 'Continent Emissions', 'Comparing continents'))
-
-if chart == 'World Map': 
-    image.open('LionCheetah.png')
-if chart == 'Continent Emissions': 
-    image.open('Lion.png')
-if chart == 'Comparing continents': 
     
 
 
