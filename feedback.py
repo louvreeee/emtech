@@ -8,6 +8,13 @@ session_state = st.session_state
 # Initialize feedback_data_exists in session state
 if 'feedback_data_exists' not in session_state:
     session_state.feedback_data_exists = False
+# Function to collect user feedback
+def collect_user_feedback(image_name, predicted_class, user_feedback):
+    feedback_data = pd.read_csv('user_feedback.csv')
+    feedback_data = feedback_data.append({'ImageName': image_name, 'PredictedClass': predicted_class, 'UserFeedback': user_feedback}, ignore_index=True)
+    feedback_data.to_csv('user_feedback.csv', index=False)
+    session_state.feedback_data_exists = True
+
 
 @st.cache(allow_output_mutation=True)
 def load_model():
