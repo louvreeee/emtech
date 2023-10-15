@@ -9,12 +9,25 @@ session_state = st.session_state
 # Initialize feedback_data_exists in session state
 if 'feedback_data_exists' not in session_state:
     session_state.feedback_data_exists = False
+
+# Define the filename for user feedback data
+feedback_filename = 'user_feedback.csv'
+
 # Function to collect user feedback
 def collect_user_feedback(image_name, predicted_class, user_feedback):
-    feedback_data = pd.read_csv('user_feedback.csv')
+    # Check if the feedback file exists
+    if not os.path.exists(feedback_filename):
+        feedback_data = pd.DataFrame(columns=['ImageName', 'PredictedClass', 'UserFeedback'])
+    else:
+        feedback_data = pd.read_csv(feedback_filename)
+    
     feedback_data = feedback_data.append({'ImageName': image_name, 'PredictedClass': predicted_class, 'UserFeedback': user_feedback}, ignore_index=True)
-    feedback_data.to_csv('user_feedback.csv', index=False)
+    
+    # Save the updated feedback data to the file
+    feedback_data.to_csv(feedback_filename, index=False)
     session_state.feedback_data_exists = True
+    
+
 
 
 @st.cache(allow_output_mutation=True)
