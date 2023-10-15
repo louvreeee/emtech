@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 from PIL import Image
+import pandas as pd  # Import the pandas module
 
 # Initialize session state
 session_state = st.session_state
