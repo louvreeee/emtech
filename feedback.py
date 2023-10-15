@@ -2,6 +2,13 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 
+# Initialize session state
+session_state = st.session_state
+
+# Initialize feedback_data_exists in session state
+if 'feedback_data_exists' not in session_state:
+    session_state.feedback_data_exists = False
+
 @st.cache(allow_output_mutation=True)
 def load_model():
   model=tf.keras.models.load_model('finals11.hdf5')
