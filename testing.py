@@ -84,22 +84,4 @@ else:
     string="The picture shown above is a  "+class_names[np.argmax(prediction)]
     st.success(string)
 
-# User feedback section
-st.header("User Feedback")
-user_feedback = st.checkbox("Was this classification correct?")
 
-if st.button("Submit Feedback"):
-    collect_user_feedback(file.name, class_names[np.argmax(prediction)], user_feedback)
-    st.success("Feedback submitted successfully!")
-
-# Display statistics or insights based on user interactions and collected feedback
-if st.session_state.feedback_data_exists:
-    feedback_data = pd.read_csv('user_feedback.csv')
-
-    total_feedback = len(feedback_data)
-    correct_feedback = len(feedback_data[feedback_data['UserFeedback']])
-
-    st.subheader("Feedback Statistics")
-    st.write(f"Total Feedback Submitted: {total_feedback}")
-    st.write(f"Correct Feedback: {correct_feedback}")
-    st.write(f"Feedback Accuracy: {correct_feedback / total_feedback:.2%}")
