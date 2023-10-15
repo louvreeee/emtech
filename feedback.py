@@ -22,13 +22,15 @@ def collect_user_feedback(image_name, predicted_class, user_feedback):
     else:
         feedback_data = pd.read_csv(feedback_filename)
     
-    feedback_data = feedback_data.append({'ImageName': image_name, 'PredictedClass': predicted_class, 'UserFeedback': user_feedback}, ignore_index=True)
+    # Create a new DataFrame with feedback data
+    new_feedback = pd.DataFrame({'ImageName': [image_name], 'PredictedClass': [predicted_class], 'UserFeedback': [user_feedback]})
+    
+    # Concatenate the new feedback with the existing data
+    feedback_data = pd.concat([feedback_data, new_feedback], ignore_index=True)
     
     # Save the updated feedback data to the file
     feedback_data.to_csv(feedback_filename, index=False)
     session_state.feedback_data_exists = True
-    
-
 
 
 @st.cache(allow_output_mutation=True)
