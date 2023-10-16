@@ -141,11 +141,7 @@ else:
         st.success("Feedback submitted successfully!")
 
     # Display statistics or insights based on user interactions and collected feedback
-    if st.session_state.feedback_data_exists:
-        feedback_data = pd.read_csv('user_feedback.csv')
 
-        total_feedback = len(feedback_data)
-        correct_feedback = len(feedback_data[feedback_data['UserFeedback']])
 
         st.subheader("Feedback Statistics")
         st.write(f"Total Feedback Submitted: {total_feedback}")
