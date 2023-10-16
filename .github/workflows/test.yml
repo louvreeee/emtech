@@ -22,4 +22,5 @@ jobs:
       run: pip install pyflakes
 
     - name: Run pyflakes
-      run: pyflakes app.py
+      run: pyflakes testing.py
+      
