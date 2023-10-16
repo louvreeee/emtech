@@ -2,6 +2,13 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 
+# Initialize feedback_data_exists in session state
+if 'feedback_data_exists' not in session_state:
+    session_state.feedback_data_exists = False
+
+# Define the filename for user feedback data
+feedback_filename = 'user_feedback.csv'
+
 @st.cache(allow_output_mutation=True)
 def load_model():
   model=tf.keras.models.load_model('finals11.hdf5')
