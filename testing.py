@@ -2,6 +2,12 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 
+@st.cache(allow_output_mutation=True)
+def load_model():
+  model=tf.keras.models.load_model('finals11.hdf5')
+  return model
+model=load_model()
+
 st.markdown(
 """
     <style>
