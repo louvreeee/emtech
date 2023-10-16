@@ -113,24 +113,6 @@ else:
     string="The picture shown above is a  "+class_names[np.argmax(prediction)]
     st.success(string)
 
-import numpy as np
-def import_and_predict(image_data, model):
-    size = (64, 64)
-    image = image_data.resize(size)  # Resize without using Image.ANTIALIAS
-    img = np.asarray(image)
-    img_reshape = img[np.newaxis, ...]
-    prediction = model.predict(img_reshape)
-    return prediction
-if file is None:
-    st.text("Please upload an image file")
-else:
-    image=Image.open(file)
-    st.image(image,use_column_width=True)
-    prediction=import_and_predict(image,model)
-    class_names=['Lion','Cheetah']
-    string="The picture shown above is a  "+class_names[np.argmax(prediction)]
-    st.success(string)
-
 
     # User feedback section
     st.header("User Feedback")
