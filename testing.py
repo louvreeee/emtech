@@ -64,6 +64,7 @@ st.info("""To view and display a sample image of a cheetah or lion, please selec
 # Lion or Cheetah Classification""")
 file=st.file_uploader("Choose photo from computer, must be a lion or cheetah",type=["jpg","png"])
 
+import numpy as np
 from PIL import Image
 def import_and_predict(image_data, model):
     size = (64, 64)
