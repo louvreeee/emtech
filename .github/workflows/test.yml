@@ -22,5 +22,5 @@ jobs:
       run: pip install pyflakes
 
     - name: Run pyflakes
-      run: pyflakes testing.py
+      run: pyflakes DevOps-3.py
       
