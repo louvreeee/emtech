@@ -95,8 +95,6 @@ st.info("""To view and display a sample image of a cheetah or lion, please selec
 file=st.file_uploader("Choose photo from computer, must be a lion or cheetah",type=["jpg","png"])
 
 
-import cv2
-from PIL import Image, ImageOps
 import numpy as np
 def import_and_predict(image_data, model):
     size = (64, 64)
@@ -114,6 +112,3 @@ else:
     class_names=['Lion','Cheetah']
     string="The picture shown above is a  "+class_names[np.argmax(prediction)]
     st.success(string)
-
-
-   
