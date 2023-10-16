@@ -1,6 +1,35 @@
 import streamlit as st
 import tensorflow as tf
 from PIL import Image
+import pandas as pd
+
+# Initialize session state
+session_state = st.session_state
+
+# Initialize feedback_data_exists in session state
+if 'feedback_data_exists' not in session_state:
+    session_state.feedback_data_exists = False
+
+# Define the filename for user feedback data
+feedback_filename = 'user_feedback.csv'
+
+# Function to collect user feedback
+def collect_user_feedback(image_name, predicted_class, user_feedback):
+    # Check if the feedback file exists
+    if not os.path.exists(feedback_filename):
+        feedback_data = pd.DataFrame(columns=['ImageName', 'PredictedClass', 'UserFeedback'])
+    else:
+        feedback_data = pd.read_csv(feedback_filename)
+    
+    # Create a new DataFrame with feedback data
+    new_feedback = pd.DataFrame({'ImageName': [image_name], 'PredictedClass': [predicted_class], 'UserFeedback': [user_feedback]})
+    
+    # Concatenate the new feedback with the existing data
+    feedback_data = pd.concat([feedback_data, new_feedback], ignore_index=True)
+    
+    # Save the updated feedback data to the file
+    feedback_data.to_csv(feedback_filename, index=False)
+    session_state.feedback_data_exists = True
 
 @st.cache(allow_output_mutation=True)
 def load_model():
